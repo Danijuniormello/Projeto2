@@ -1,1 +1,45 @@
+body {
+    background-color: black;
+    color: green;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
 
+.player-container {
+    margin: 50px auto;
+    max-width: 400px;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+audio {
+    width: 100%;
+}
+
+.controls {
+    margin-top: 10px;
+}
+
+button {
+    background-color: green;
+    color: black;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: darkgreen;
+}
+
+#play-pause-button {
+    background-color: orange;
+    color: black;
+}
+
+#play-pause-button:hover {
+    background-color: darkorange;
+}
