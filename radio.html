@@ -3,22 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de Música com Fundo de Vídeo</title>
+    <title>Player de Música</title>
     <link rel="stylesheet" href="radio.css">
 </head>
 <body>
-    <video id="video-bg" autoplay muted loop>
-        <source src="videomp47/Green and Orange Vertical.mp4" type="video/mp4">
-    </video>
-    <div class="player-container">
-        <div class="audio-info neon-glow">
-            <h1>Minha playlist babadeira</h1>
-            <p>top 10 melhores musicas do mundo</p>
-        </div>
-        <audio id="audio" controls autoplay></audio>
+    <div class="container">
+        <h1>Player de Música</h1>
+        <audio id="music-player" controls>
+            <source src="radiomp3/musica1.mp3" type="audio/mpeg">
+        </audio>
         <div class="controls">
             <button id="prev-button">Anterior</button>
-            <button id="play-pause-button">Play</button>
+            <button id="play-button">Play</button>
             <button id="next-button">Próxima</button>
         </div>
     </div>
