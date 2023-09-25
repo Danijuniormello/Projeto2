@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Player de Música Neon</title>
+    <title>Player de Música com Fundo de Vídeo</title>
     <link rel="stylesheet" href="radio.css">
 </head>
 <body>
-    <div class="background"></div>
+    <video id="video-bg" autoplay muted loop>
+        <source src="videomp4/" type="video/mp4">
+        Seu navegador não suporta vídeos em HTML5.
+    </video>
     <div class="player-container">
         <div class="audio-info neon-glow">
             <p>Nome da Música</p>
@@ -23,4 +26,3 @@
     <script src="radio.js"></script>
 </body>
 </html>
-
