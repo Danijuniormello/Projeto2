@@ -1,52 +1,33 @@
-const audio = document.getElementById('audio');
-const playPauseButton = document.getElementById('play-pause-button');
+const musicPlayer = document.getElementById('music-player');
+const playButton = document.getElementById('play-button');
 const prevButton = document.getElementById('prev-button');
 const nextButton = document.getElementById('next-button');
 
-const songs = [
-    'radiomp3/Como Nossos Pais(MP3_160K).mp3',
-    'radiomp3/EVIL(MP3_160K).mp3',
-    'radiomp3/Foi Mal(MP3_160K).mp3',
-    'radiomp3/Giant Woman (feat. Zach Callison)(MP3_160K).mp3',
-    'radiomp3/Greta Van Fleet - Light My Love (Audio)(MP3_160K).mp3',
-    'radiomp3/Infinity Pools(MP3_160K).mp3',
-    'radiomp3/The Principal(MP3_160K).mp3',
-    'radiomp3/The Technicolors - Howl (Official Music Video)(MP3_160K).mp3',
-    'radiomp3/URIAS - DANGER ( OFFICIAL VISUALIZER)(MP3_160K).mp3',
-    'radiomp3/Wait a Minute_(MP3_160K).mp3',
-];
-
+const songs = ['musica1.mp3', 'musica2.mp3', 'musica3.mp3']; // Coloque o nome das suas músicas aqui
 let currentSongIndex = 0;
 
-function loadSong() {
-    audio.src = songs[currentSongIndex];
-}
-
 function playPause() {
-    if (audio.paused) {
-        audio.play();
-        playPauseButton.textContent = 'Pause';
+    if (musicPlayer.paused) {
+        musicPlayer.play();
+        playButton.textContent = 'Pausar';
     } else {
-        audio.pause();
-        playPauseButton.textContent = 'Play';
+        musicPlayer.pause();
+        playButton.textContent = 'Play';
     }
 }
 
 function playNext() {
     currentSongIndex = (currentSongIndex + 1) % songs.length;
-    loadSong();
-    audio.play();
+    musicPlayer.src = `radiomp3/${songs[currentSongIndex]}`;
+    musicPlayer.play();
 }
 
 function playPrev() {
     currentSongIndex = (currentSongIndex - 1 + songs.length) % songs.length;
-    loadSong();
-    audio.play();
+    musicPlayer.src = `radiomp3/${songs[currentSongIndex]}`;
+    musicPlayer.play();
 }
 
-loadSong();
-
-playPauseButton.addEventListener('click', playPause);
+playButton.addEventListener('click', playPause);
 nextButton.addEventListener('click', playNext);
 prevButton.addEventListener('click', playPrev);
-
